@@ -13,7 +13,7 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
         home home = new home();
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(home, 800, 800);
+        Scene scene = new Scene(home, 900, 900);
         stage.setTitle("Home");
         stage.setScene(scene);
         stage.show();
