@@ -69,5 +69,17 @@ public class home extends BorderPane {
             }
         });
 
+        openingLessonBtn.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                Stage s = (Stage) home.this.getScene().getWindow();
+                openingLessons openings = new openingLessons();
+                FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("hello-view.fxml"));
+                Scene scene = new Scene(openings, 900, 900);
+                s.setScene(scene);
+                s.setTitle("Opening Lessons");
+            }
+        });
+
     }
 }
