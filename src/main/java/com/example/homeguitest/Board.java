@@ -2,14 +2,18 @@ package com.example.homeguitest;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
-import java.awt.*;
-import java.swing.*;
 
 public class Board extends BorderPane {
+
+    private static final int BOARD_SIZE = 8;
 
     public Board(){
 
@@ -28,10 +32,18 @@ public class Board extends BorderPane {
             }
         });
 
-      /*  JFrame frame;
-        JPanel squares [][] = new JPanel[8][8];
+            GridPane gridPane = new GridPane();
+            gridPane.setAlignment(Pos.CENTER);
 
-       */
+            for (int row = 0; row < BOARD_SIZE; row++) {
+                for (int col = 0; col < BOARD_SIZE; col++) {
+                    Rectangle rect = new Rectangle(75, 75, (row + col) % 2 == 0 ? Color.WHITE : Color.LIGHTGRAY);
+                    gridPane.add(rect, col, row);
+                }
+            }
+
+            setCenter(gridPane);
+
 
 
 
