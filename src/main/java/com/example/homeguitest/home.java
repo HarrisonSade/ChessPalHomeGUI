@@ -63,7 +63,7 @@ public class home extends BorderPane {
                 Stage s = (Stage) home.this.getScene().getWindow();
                 Board Board = new Board();
                 FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("hello-view.fxml"));
-                Scene scene = new Scene(Board, 900, 900);
+                Scene scene = new Scene(Board, s.getWidth(), s.getHeight());
                 s.setScene(scene);
                 s.setTitle("Board");
             }
@@ -75,7 +75,7 @@ public class home extends BorderPane {
                 Stage s = (Stage) home.this.getScene().getWindow();
                 openingLessons openings = new openingLessons();
                 FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("hello-view.fxml"));
-                Scene scene = new Scene(openings, 900, 900);
+                Scene scene = new Scene(openings, s.getWidth(), s.getHeight());
                 s.setScene(scene);
                 s.setTitle("Opening Lessons");
             }
