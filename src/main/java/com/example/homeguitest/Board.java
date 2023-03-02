@@ -32,6 +32,7 @@ public class Board extends BorderPane {
             }
         });
 
+            //Board squares
             GridPane gridPane = new GridPane();
             gridPane.setAlignment(Pos.CENTER);
 
