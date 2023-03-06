@@ -29,8 +29,11 @@ public class home extends BorderPane {
         Button openingLessonBtn = new Button("Opening Lessons");
         openingLessonBtn.setMaxSize(300, 100);
 
+        Button defenseLessonBtn = new Button("Defense Lessons");
+        defenseLessonBtn.setMaxSize(300, 100);
 
-        VBox centerBtns = new VBox(boardBtn, openingLessonBtn);
+
+        VBox centerBtns = new VBox(boardBtn, openingLessonBtn, defenseLessonBtn);
         centerBtns.setAlignment(Pos.CENTER);
         centerBtns.setSpacing(20);
         this.setCenter(centerBtns);
@@ -50,11 +53,6 @@ public class home extends BorderPane {
         title.setPadding(new Insets(30));
         this.setTop(title);
         title.setSpacing(20);
-
-
-
-        //homeText.setFont(Font.font/(Cambria, 50));
-
 
 
         boardBtn.setOnAction(new EventHandler<ActionEvent>() {
@@ -78,6 +76,18 @@ public class home extends BorderPane {
                 Scene scene = new Scene(openings, s.getWidth(), s.getHeight());
                 s.setScene(scene);
                 s.setTitle("Opening Lessons");
+            }
+        });
+
+        defenseLessonBtn.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                Stage s = (Stage) home.this.getScene().getWindow();
+                defenseLessons defenses = new defenseLessons();
+                FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("hello-view.fxml"));
+                Scene scene = new Scene(defenses, s.getWidth(), s.getHeight());
+                s.setScene(scene);
+                s.setTitle("defense Lessons");
             }
         });
 

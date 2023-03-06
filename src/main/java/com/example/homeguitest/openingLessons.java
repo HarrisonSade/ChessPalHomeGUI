@@ -2,6 +2,7 @@ package com.example.homeguitest;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
@@ -14,10 +15,29 @@ public class openingLessons extends BorderPane {
     public openingLessons(){
 
         Button london = new Button("London System");
-        london.setMaxSize(300, 150);
-        london.setFont(Font.font("Cambria", 30));
+        london.setMaxSize(250, 100);
+        london.setFont(Font.font("Cambria", 25));
 
-        VBox openings = new VBox(london);
+        Button vienna = new Button("Vienna");
+        vienna.setMaxSize(250, 100);
+        vienna.setFont(Font.font("Cambria", 25));
+
+        Button qGambit = new Button("Queens Gambit");
+        qGambit.setMaxSize(250, 100);
+        qGambit.setFont(Font.font("Cambria", 25));
+
+        Button friedLiver = new Button("Fried Liver");
+        friedLiver.setMaxSize(250, 100);
+        friedLiver.setFont(Font.font("Cambria", 25));
+
+        Button kGambit = new Button("Kings Gambit");
+        kGambit.setMaxSize(250, 100);
+        kGambit.setFont(Font.font("Cambria", 25));
+
+
+        VBox openings = new VBox(london, vienna, qGambit, friedLiver, kGambit);
+        openings.setSpacing(50);
+        openings.setPadding(new Insets(285, 200, 275, 330));
         this.setCenter(openings);
 
         Button back = new Button("Back");
