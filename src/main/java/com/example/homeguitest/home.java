@@ -32,7 +32,6 @@ public class home extends BorderPane {
         Button defenseLessonBtn = new Button("Defense Lessons");
         defenseLessonBtn.setMaxSize(300, 100);
 
-
         VBox centerBtns = new VBox(boardBtn, openingLessonBtn, defenseLessonBtn);
         centerBtns.setAlignment(Pos.CENTER);
         centerBtns.setSpacing(20);
@@ -58,9 +57,8 @@ public class home extends BorderPane {
         boardBtn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                Stage s = (Stage) home.this.getScene().getWindow();
                 Board Board = new Board();
-                FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("hello-view.fxml"));
+                Stage s = (Stage) home.this.getScene().getWindow();
                 Scene scene = new Scene(Board, s.getWidth(), s.getHeight());
                 s.setScene(scene);
                 s.setTitle("Board");
@@ -90,6 +88,7 @@ public class home extends BorderPane {
                 s.setTitle("defense Lessons");
             }
         });
+
 
     }
 }
